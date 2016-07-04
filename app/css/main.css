@@ -5,7 +5,7 @@
 }
 a {
   text-decoration: none;
-  color: #d86464;
+  color: white;
 }
 body .container {
   text-align: center;
@@ -78,6 +78,34 @@ body .more {
   max-height: 70px;
   position: absolute;
   background: blue;
+  z-index: 4;
+}
+body .kor-1 {
+  max-width: 300px;
+  max-height: 200px;
+  left: 0;
+  right: 0;
+  top: -150px;
+  position: relative;
+  float: left;
+  transform-style: preserve-3d;
+  z-index: 4;
+  -webkit-animation: kor 4s ease-out alternate-reverse infinite;
+  animation: kor 4s ease-out alternate-reverse infinite;
+}
+body .kor-2 {
+  max-width: 170px;
+  max-height: 170px;
+  left: -50px;
+  right: 0;
+  top: -130px;
+  bottom: 0;
+  position: relative;
+  float: right;
+  transform-style: preserve-3d;
+  z-index: 4;
+  -webkit-animation: kor 3s ease-out alternate infinite;
+  animation: kor 3s ease-out alternate infinite;
 }
 body .animation-pictures-cloud-5 {
   transform-style: preserve-3d;
@@ -94,9 +122,9 @@ body .main-container {
   bottom: 0;
   min-height: 250px;
   position: absolute;
-  background: #bccd3e;
+  background: #5b4719;
   padding: 50px;
-  z-index: -1;
+  z-index: 8;
 }
 body .main-container div {
   cursor: pointer;
@@ -105,10 +133,11 @@ body .main-container div {
   top: 80px;
   bottom: 0;
   position: relative;
+  background: #cca800;
 }
 body .main-container div:hover {
-  border: 2px solid #d82134;
-  color: #d82134;
+  border: 2px solid yellowgreen;
+  color: #fa3c34;
 }
 body .main-container i {
   padding: 0 20px 0;
@@ -123,12 +152,32 @@ body .main-container img {
   max-height: 200px;
   border-radius: 50%;
 }
+body .umbrella {
+  left: 250px;
+  right: 0;
+  top: -100px;
+  bottom: 0;
+  position: absolute;
+  min-width: 200px;
+  min-height: 200px;
+  max-height: 300px;
+  z-index: 6;
+}
+body .umbrella-2 {
+  float: right;
+  left: 750px;
+  right: 0;
+  top: -130px;
+  bottom: 0;
+  position: absolute;
+  z-index: 6;
+}
 body .gh {
   width: 250px;
   min-width: 250px;
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid #d86464;
+  border: 1px solid #1e6bd8;
   box-shadow: red;
   z-index: 4;
   float: left;
@@ -137,7 +186,7 @@ body .vk {
   width: 250px;
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid #d86464;
+  border: 1px solid #1e6bd8;
   box-shadow: red;
   z-index: 4;
   float: left;
@@ -158,9 +207,20 @@ body .vk {
     transform: translate(-1550px, -50px);
     -webkit-transform: translate(-1550px, -50px);
     /** Chrome & Safari **/
-    -o-transform: translate(-1150px, 0);
+    -o-transform: translate(-1150px, -50px);
     /** Opera **/
-    -moz-transform: translate(-1150px, 0);
+    -moz-transform: translate(-1150px, -50px);
+    /** Firefox **/
+  }
+}
+@keyframes kor {
+  50% {
+    transform: translate(10px, 4px) rotate(2deg);
+    -webkit-transform: translate(10px, 4px) rotate(2deg);
+    /** Chrome & Safari **/
+    -o-transform: translate(2px, 4px) rotate(2deg);
+    /** Opera **/
+    -moz-transform: translate(2px, 4px) rotate(2deg);
     /** Firefox **/
   }
 }
